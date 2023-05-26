@@ -1,0 +1,144 @@
+.footer {
+  padding: 24px 0;
+  background-color: #fff;
+}
+
+.footer__logo {
+  margin-bottom: 24px;
+  width: 196px;
+  color: #ff7020;
+}
+
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.footer__title {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.footer__link-phone {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #000000;
+  transition: color .2s ease-in;
+}
+
+.footer__list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__link-sn {
+  color: #ff7020;
+  transition: color .2s ease-in;
+}
+
+.footer__link-phone:hover,
+.footer__link-phone:focus {
+  color: #ff7020;
+}
+
+.footer__link-sn:hover,
+.footer__link-sn:focus {
+  color: #Ffab08;
+}
+
+.footer__development {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__development p,
+a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  transition: color .2s ease-in;
+}
+
+.footer__development a:hover {
+    color: #ff7020;
+}
+
+@media (min-width: 480px) {
+  .footer__logo {
+    margin-bottom: 26px;
+  }
+
+  .footer__address {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+
+  .footer__contact {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__content {
+    display: grid;
+    grid-template-areas:
+      "logo address"
+      "development .";
+    gap: 35px;
+  }
+
+  .footer__logo {
+    width: 300px;
+    margin-bottom: 0;
+    grid-area: logo;
+  }
+
+  .footer__address {
+    margin-bottom: 0;
+    grid-area: address;
+    gap: 50px;
+    justify-content: flex-end;
+  }
+
+  .footer__contact {
+    flex-grow: unset;
+  }
+
+  .footer__title {
+    margin-bottom: 22px;
+    font-size: 24px;
+  }
+
+  .footer__link-phone {
+    font-size: 16px;
+  }
+
+  .footer__development {
+    grid-area: development;
+  }
+}
+
+@media (min-width: 1360px) {
+  .footer__content {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 30px;
+  }
+
+  .footer__address {
+    justify-content: flex-start;
+  }
+
+  .footer__content {
+    flex-grow: 1;
+  }
+}
